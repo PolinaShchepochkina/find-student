@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список студентов</title>
+  <link rel="stylesheet" href="./vendor/normalize.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <script defer type="module" src="./components/main.js"></script>
+</head>
+
+<body class="page">
+  <h1 class="title">Список студентов</h1>
+  <!-- HTML код формы для добавления студента -->
+  <form id="add-student-form" class="add-student-form">
+    <label class="add-form__cell">Фамилия:
+      <input type="text" name="surname" class="add-form__input" required>
+    </label>
+    <label class="add-form__cell">Имя:
+      <input type="text" name="name" class="add-form__input" required>
+    </label>
+    <label class="add-form__cell">Отчество:
+      <input type="text" name="lastname" class="add-form__input" required>
+    </label>
+    <label class="add-form__cell">Дата рождения:
+      <input type="date" id="birthday" name="birthday" min="1900-01-01" class="add-form__input" required>
+    </label>
+    <label class="add-form__cell">Год начала обучения:
+      <input type="number" id="start-education" name="startEducation" min="2000" class="add-form__input" required>
+    </label>
+    <label class="add-form__cell">Факультет:
+      <input type="text" name="faculty" class="add-form__input" required>
+    </label>
+    <button type="submit" class="add-form__button">Добавить студента</button>
+  </form>
+  <!-- HTML код формы для поиска студента -->
+  <form id="filter-form" class="filter-form">
+    <h2>Для быстрого поиска воспользуйтесь фильтром</h2>
+    <label class="filter-form__line">По Ф.И.О.:
+      <input type="text" id="name-filter" class="filter-form__input">
+      <!-- <button type="submit" class="filter-form__button">Применить фильтр</button> -->
+    </label>
+    <label class="filter-form__line">По факультету:
+      <input type="text" id="faculty-filter" class="filter-form__input">
+      <!-- <button type="submit" class="filter-form__button">Применить фильтр</button> -->
+    </label>
+    <label class="filter-form__line">По году поступления:
+      <input type="text" id="start-educ-filter" class="filter-form__input">
+      <!-- <button type="submit" class="filter-form__button">Применить фильтр</button> -->
+    </label>
+    <label class="filter-form__line">По году выпуска:
+      <input type="text" id="finish-educ-filter" class="filter-form__input">
+      <!-- <button type="submit" class="filter-form__button">Применить фильтр</button> -->
+    </label>
+    <div class="filter-form__buttons">
+      <button type="submit" class="filter-form__button">Применить фильтр</button>
+      <button type="button" id="reset-filter" class="filter-form__button">Сбросить фильтры</button>
+    </div>
+  </form>
+  <!-- HTML код таблицы со списком студентов -->
+  <table id="table" class="table">
+    <thead>
+      <tr>
+        <th name="name">Ф.И.О. студента</th>
+        <th name="birthday">Дата рождения, возраст</th>
+        <th name="start-education">Годы обучения, номер курса</th>
+        <th name="faculty">Факультет</th>
+      </tr>
+    </thead>
+    <tbody id="students-list" class="students-list">
+      <!-- здесь будут добавляться строки с данными студентов -->
+    </tbody>
+  </table>
+</body>
+
+</html>

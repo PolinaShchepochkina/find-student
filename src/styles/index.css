@@ -1,0 +1,97 @@
+.page {
+  max-width: 1920px;
+  height: 100vh;
+  margin: 50px 50px 80px;
+  background: whitesmoke;
+}
+
+.title {
+  text-shadow: 4px 4px 4px rgb(0 0 255 / 20%);
+}
+
+.add-student-form {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+.add-form__cell {
+  margin-bottom: 10px;
+}
+
+.add-form__input {
+  width: -webkit-fill-available;
+  height: 20px;
+  border: 1px solid rgba(159, 159, 159, 0.85);
+  border-radius: 3px;
+}
+
+.add-form__button {
+  background: rgb(93, 255, 93);
+  height: 28px;
+  border: 0;
+  border-radius: 3px;
+  margin-bottom: 25px;
+}
+
+.add-form__button:hover {
+  cursor: pointer;
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-bottom: 50px;
+}
+
+.filter-form__line {
+  display: grid;
+  grid-template-columns: fit-content(147px) auto 155px;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.filter-form__input {
+  border: 1px solid rgba(159, 159, 159, 0.85);
+  border-radius: 3px;
+}
+
+.table {
+  width: 80%;
+}
+
+.students-list {
+  text-align: center;
+}
+
+th {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+tr {
+  text-align: left;
+}
+
+tr:nth-child(2n) {
+  background: #f9f9f9;
+}
+
+.filter-form__buttons {
+  display: flex;
+  width: 75%;
+  gap: 5px;
+}
+
+.filter-form__button {
+  width: 50%;
+}
+
+.filter-form__button:hover {
+  cursor: pointer;
+  border: 2px solid rgb(93, 255, 93);
+  border-radius: 3px;
+}
