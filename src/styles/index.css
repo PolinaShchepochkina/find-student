@@ -1,79 +1,84 @@
-.page {
-  max-width: 1920px;
-  height: 100vh;
-  margin: 50px 50px 80px;
-  background: whitesmoke;
+body {
+  margin: 3% 5% 7%;
 }
 
-.title {
+h1 {
+  font-size: 40px;
   text-shadow: 4px 4px 4px rgb(0 0 255 / 20%);
+  margin: 0;
 }
 
-.add-student-form {
+h2 {
+  font-size: 20px;
+}
+
+.forms {
+  display: grid;
+  grid-template-columns: 45% 35%;
+  gap: 8%;
+  margin: 25px 0;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  width: 35%;
 }
 
 .add-form__cell {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
-.add-form__input {
+input {
   width: -webkit-fill-available;
   height: 20px;
   border: 1px solid rgba(159, 159, 159, 0.85);
   border-radius: 3px;
 }
 
-.add-form__button {
-  background: rgb(93, 255, 93);
-  height: 28px;
+button {
+  background: rgb(0 0 255 / 20%);
+  height: fit-content;
+  padding: 6px 0;
   border: 0;
   border-radius: 3px;
-  margin-bottom: 25px;
+  margin: 8px 0;
 }
 
-.add-form__button:hover {
+.button-delete {
+  background: rgba(255, 0, 0, 0.65);
+  padding: 6px 6px;
+}
+
+button:hover {
   cursor: pointer;
-  box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
-}
-
-.filter-form {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-  margin-bottom: 50px;
+  background: greenyellow;
 }
 
 .filter-form__line {
   display: grid;
-  grid-template-columns: fit-content(147px) auto 155px;
+  grid-template-columns: fit-content(170px) auto;
+  align-items: center;
   gap: 5px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
-.filter-form__input {
-  border: 1px solid rgba(159, 159, 159, 0.85);
-  border-radius: 3px;
-}
-
-.table {
-  width: 80%;
-}
-
-.students-list {
-  text-align: center;
+table {
+  width: 90%;
+  margin-top: 15px;
 }
 
 th {
   text-align: left;
   border-bottom: 1px solid #ccc;
   cursor: pointer;
+  font-size: 20px;
 }
 
 tr {
   text-align: left;
+  font-size: 18px;
 }
 
 tr:nth-child(2n) {
@@ -81,17 +86,7 @@ tr:nth-child(2n) {
 }
 
 .filter-form__buttons {
-  display: flex;
-  width: 75%;
-  gap: 5px;
-}
-
-.filter-form__button {
-  width: 50%;
-}
-
-.filter-form__button:hover {
-  cursor: pointer;
-  border: 2px solid rgb(93, 255, 93);
-  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
